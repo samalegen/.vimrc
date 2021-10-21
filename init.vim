@@ -14,7 +14,6 @@ set scrolloff=7
 
 set ffs=unix,dos,mac "стандарт использования символов переноса строки в файлах на первом месте находится вариант Unix, где для переноса строки используется только символ \n"
 
-set wrap "nowrap Чтобы отобразить длинные строки как одну строку (т.е. вам нужно прокрутить по горизонтали, чтобы увидеть всю строку) wrap Для визуального переноса строк, то есть строка по-прежнему остается одной строкой текста, но Vim отображает ее на нескольких строках.
 
 
 
@@ -83,6 +82,7 @@ map <C-j> :NextColorScheme<CR>
 map <C-k> :PrevColorScheme<CR>
 map <C-l> :RandomColorScheme<CR>
 
+
 colorscheme gruvbox
 " colorscheme OceanicNext
 "let g:material_terminal_italics = 1
@@ -126,7 +126,7 @@ cmp.setup {
   },
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
-    "['<C-n>'] = cmp.mapping.select_next_item(),"
+    ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -294,8 +294,7 @@ map gn :bn<cr>
 map gp :bp<cr>
 map gw :Bclose<cr>
 
-"set colorcolumn=79  "вертикальная полоса на колличество символов, чтобы код
-"не растягивать
+set colorcolumn=79
 
 " run current script with python3 by CTRL+R in command and insert mode
 autocmd FileType python map <buffer> <C-r> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
