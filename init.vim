@@ -76,6 +76,15 @@ call plug#end()
 
 "mapping"
 map <C-n> :NERDTreeToggle<CR>
+map <M-1> :gt1  
+map <M-2> :gt2  
+map <M-3> :gt3  
+map <M-4> :gt4  
+map <M-5> :gt5  
+map <M-6> :gt6  
+map <M-7> :gt7  
+map <M-8> :gt8  
+map <M-9> :gt9  
 
 "map vim-colorschemes 
 map <C-j> :NextColorScheme<CR>
